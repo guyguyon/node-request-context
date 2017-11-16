@@ -8,7 +8,7 @@
 
 Node request context let you save any context per request and easily retrieve it.
 
-> Attention! This package is using the new [async hooks](https://nodejs.org/api/async_hooks.html) API which is available from Node 8.9.0 but still experimental. It is strongly NOT recommended to use in production environments.  
+> Attention! This package is using the new [async hooks](https://nodejs.org/api/async_hooks.html) API, which is available from Node 8.9.0, but still experimental. It is strongly recommended NOT to use in production environments.  
 
 ## Install
 
@@ -51,7 +51,7 @@ http.createServer(function (req, res) {
 }).listen(8079);
 ``` 
 
-You can use retrieve any context variable in any other file
+You can retrieve any context variable in any other file
 
 ```javascript
 const { getNamespace } = require('node-request-context');
