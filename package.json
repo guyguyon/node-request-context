@@ -1,14 +1,16 @@
 {
   "name": "node-request-context",
   "version": "1.0.0",
-  "description": "A package to keep a context object per request for Node.js > 8.9",
+  "description": "Node request context let you save any context per request and easily retrieve it",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "example": "node example"
   },
   "author": "Guy Segev",
   "license": "ISC",
   "devDependencies": {
+    "jasmine": "^2.8.0",
     "request": "^2.83.0",
     "request-promise-native": "^1.0.5",
     "uuid": "^3.1.0"
