@@ -31,22 +31,22 @@ const namespace = createNamespace('myapp.mynamespace');
 
 
 http.createServer(function (req, res) {	
-	// Wrap your request with namespace.run
-	namespace.run(() => {
-		const transactionId = uuid.v1();
+  // Wrap your request with namespace.run
+  namespace.run(() => {
+    const transactionId = uuid.v1();
 
-		// Set any variable using the set function
-		namespace.set('tid', transactionId);
+    // Set any variable using the set function
+    namespace.set('tid', transactionId);
 
-        someAsyncFunc.then((data) => {
+    someAsyncFunc.then((data) => {
 
-	        // Get your variable using namespace.get 
-			console.log('Some message', { transactionId: namespace.get('tid') });
-			res.end(data);
-		}).catch((err) => {
-		    console.log(err.message, { transactionId: namespace.get('tid') });
-        })
-	})
+      // Get your variable using namespace.get 
+      console.log('Some message', { transactionId: namespace.get('tid') });
+      res.end(data);
+    }).catch((err) => {
+      console.log(err.message, { transactionId: namespace.get('tid') });
+    });
+  });
 
 }).listen(8079);
 ``` 
@@ -58,9 +58,9 @@ const { getNamespace } = require('node-request-context');
 const namespace = getNamespace('myapp.mynamespace');
 
 class A {
-	foo() {
-		const tid = namespace.get('tid')
-	}
+  foo() {
+    const tid = namespace.get('tid')
+  }
 }
 ```
 
@@ -77,7 +77,7 @@ To run a working example
 
 Guy Segev 
 
-[Email](guyguyon@gmail.com)  |  [LinkedIn](https://www.linkedin.com/in/guyguyon)  
+[Email](mailto:guyguyon@gmail.com)  |  [LinkedIn](https://www.linkedin.com/in/guyguyon)  
 
 ## Contributing
 
