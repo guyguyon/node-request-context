@@ -1,12 +1,29 @@
 {
   "name": "node-request-context",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Node request context let you save any context per request and easily retrieve it",
   "main": "index.js",
   "scripts": {
     "test": "jasmine",
     "example": "node example"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guyguyon/node-request-context.git"
+  },
+  "bugs": {
+    "url": "https://github.com/guyguyon/node-request-context/issues"
+  },
+  "keywords": [
+    "es6",
+    "node",
+    "js",
+    "async",
+    "hooks",
+    "request",
+    "context"
+  ],
+  "homepage": "https://github.com/guyguyon/node-request-context#readme",
   "author": "Guy Segev",
   "license": "ISC",
   "devDependencies": {
