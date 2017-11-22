@@ -3,13 +3,7 @@ const Namespace = require('./namespace');
 
 const namespaces = {};
 
-function createNamespace(name) {
-    if (namespaces[name]) { throw new Error(`A namespace for ${name} is already exists`); }
-
-    const namespace = new Namespace();
-    namespaces[name] = namespace;
-
-
+function createHooks(namespace) {
     function init(asyncId, type, triggerId, resource) {
         if (!namespace.context[asyncId]) {
             namespace.context[asyncId] = namespace.context[triggerId];
@@ -23,6 +17,15 @@ function createNamespace(name) {
     const asyncHook = asyncHooks.createHook({ init, destroy });
 
     asyncHook.enable();
+}
+
+function createNamespace(name) {
+    if (namespaces[name]) { throw new Error(`A namespace for ${name} is already exists`); }
+
+    const namespace = new Namespace();
+    namespaces[name] = namespace;
+
+    createHooks(namespace);
 
     return namespace;
 }

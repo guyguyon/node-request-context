@@ -16,7 +16,10 @@ http.createServer(function (req, res) {
         const sr = new SomeResource();
 
 		sr.get().then((ans) => {
-			console.log(namespace.get('tid'));
+		    setTimeout(() => {
+                console.log(namespace.get('tid'));
+            }, 5000);
+
 			res.end(ans);
 		}).catch((err) => {
 		    console.log('Error: ', err);
