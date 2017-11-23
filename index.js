@@ -5,7 +5,7 @@ const namespaces = {};
 
 function createHooks(namespace) {
     function init(asyncId, type, triggerId, resource) {
-        if (!namespace.context[asyncId]) {
+        if (namespace.context[triggerId]) {
             namespace.context[asyncId] = namespace.context[triggerId];
         }
     }
