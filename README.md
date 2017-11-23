@@ -7,6 +7,7 @@
 # Node Request Context
 
 Node request context let you save any context per request and easily retrieve it.
+Read my blog post about [building the package on Medium](https://medium.com/@guysegev/async-hooks-a-whole-new-world-of-opportunities-a1a6daf1990a)
 
 > Attention! This package is using the new [async hooks](https://nodejs.org/api/async_hooks.html) API, which is available from Node 8.9.0, but still experimental. It is strongly recommended NOT to use in production environments.  
 
