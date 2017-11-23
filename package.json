@@ -1,6 +1,6 @@
 {
   "name": "node-request-context",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Node request context let you save any context per request and easily retrieve it",
   "main": "index.js",
   "scripts": {
