@@ -15,12 +15,14 @@ class Namespace {
 
 	set(key, val) {
 		const eid = asyncHooks.executionAsyncId();
-		this.context[eid][key] = val;
+		if (this.context[eid]) {
+			this.context[eid][key] = val;
+		}
 	}
 
 	get(key) {
 		const eid = asyncHooks.executionAsyncId();
-		return this.context[eid][key]
+		return this.context[eid] && this.context[eid][key];
 	}
 }
 
