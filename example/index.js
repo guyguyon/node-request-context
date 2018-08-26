@@ -5,25 +5,29 @@ const namespace = require('../').createNamespace('ns');
 const SomeResource = require('./some_resource');
 
 
+let counter = 1;
 
 http.createServer(function (req, res) {	
 	namespace.run(() => {
-		const randomUUID = uuid.v1();
-		console.log('Setting a new transaction id => ', randomUUID);
-		namespace.set('tid', randomUUID);
+		
+		console.log('Setting a new transaction id: ', counter);
+		
+		namespace.set('tid', counter);
+		counter++;
 
-		console.log(namespace.get('tid'));
+		console.log('Getting our transaction id: ', namespace.get('tid'));
+
         const sr = new SomeResource();
 
 		sr.get().then((ans) => {
 		    setTimeout(() => {
-                console.log(namespace.get('tid'));
+                console.log('Getting our transaction id inside setTimeout: ', namespace.get('tid'));
             }, 5000);
 
-			res.end(ans);
+			res.end('done!');
 		}).catch((err) => {
 		    console.log('Error: ', err);
         })
 	})
 
-}).listen(8079);
+}).listen(8080, () => console.log('App listening on port 8080!'));

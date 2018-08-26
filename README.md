@@ -72,7 +72,7 @@ To run a working example
 1. Clone this repo
 2. Make sure node > 8.9.0 is installed
 2. Run `npm run example`
-3. Open another terminal tab and run `curl localhost:8079`
+3. Open another terminal tab and run `curl localhost:8080`
 
 ## Author
 

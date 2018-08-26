@@ -1,11 +1,11 @@
 {
   "name": "node-request-context",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Node request context let you save any context per request and easily retrieve it",
   "main": "index.js",
   "scripts": {
     "test": "jasmine",
-    "example": "node example"
+    "example": "node --inspect example"
   },
   "repository": {
     "type": "git",
