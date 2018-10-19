@@ -20,7 +20,7 @@ function createHooks(namespace) {
 }
 
 function createNamespace(name) {
-    if (namespaces[name]) { throw new Error(`A namespace for ${name} is already exists`); }
+    if (namespaces[name]) { throw new Error(`A namespace for ${name} already exists`); }
 
     const namespace = new Namespace();
     namespaces[name] = namespace;
