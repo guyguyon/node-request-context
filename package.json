@@ -26,6 +26,7 @@
   "homepage": "https://github.com/guyguyon/node-request-context#readme",
   "author": "Guy Segev",
   "license": "ISC",
+  "typings": "./index.d.ts",
   "devDependencies": {
     "jasmine": "^2.8.0",
     "request": "^2.83.0",
