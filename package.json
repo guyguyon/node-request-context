@@ -4,7 +4,7 @@
   "description": "Node request context let you save any context per request and easily retrieve it",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine",
+    "test": "jest",
     "example": "node --inspect example"
   },
   "repository": {
@@ -28,9 +28,12 @@
   "license": "ISC",
   "typings": "./index.d.ts",
   "devDependencies": {
-    "jasmine": "^2.8.0",
-    "request": "^2.83.0",
+    "jest": "^23.6.0",
+    "request": "^2.88.0",
     "request-promise-native": "^1.0.5",
     "uuid": "^3.1.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
